@@ -1,0 +1,85 @@
+html, body {
+	padding: 0px;
+	margin: 0px;
+}
+#terminal {
+	position: absolute;
+	top: 20px;
+	bottom: 20px;
+	left: 20px;
+	right: 20px;
+	border-radius: 5px;
+	background-color: black;
+	overflow:hidden;
+	color: white;
+	border: 1px solid #CCC;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 300;
+}
+#history {
+	position: absolute;
+	top: 0px;
+	bottom: 40px;
+	left: 0px;
+	right: 0px;
+	overflow: auto;
+}
+#history .code, #history .result, #history .error {
+	position: relative;
+	padding-left: 20px;
+}
+#history .code:before, #history .result:before, #history .error:before {
+	position: absolute;
+	display: block;
+	content: '<';
+	height: 16px;
+	width: 20px;
+	left: 0px;
+	vertical-align: middle;
+	line-height: 16px;
+	text-align: center;
+}
+#history .result:before, #history .error:before {
+	content: '>';
+}
+#history .code {
+	font-weight: 900;
+}
+#history .result {
+
+}
+#history .error {
+	color: red;
+}
+#input {
+	position: absolute;
+	bottom: 0px;
+	left: 20px;
+	right: 0px;
+	height: 40px;
+	width: 100%;
+	overflow: auto;
+	color: white;
+	background-color: black;
+	border: none;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 300;
+	outline: none;
+}
+#prompt {
+	position: absolute;
+	display: block;
+	content: '<';
+	height: 40px;
+	width: 20px;
+	left: 0px;
+	bottom: 0px;
+	vertical-align: middle;
+	line-height: 16px;
+	text-align: center;
+	color: white;
+}

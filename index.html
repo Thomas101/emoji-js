@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-16"/>
+	<script src="http://twemoji.maxcdn.com/twemoji.min.js"></script> 
+	<script type="text/javascript" src="emojijs.js"></script>
+	<script type="text/javascript" src="terminal.js"></script>
+
+
+	<link rel="stylesheet" type="text/css" href="terminal.css">
+</head>
+<body>
+	<div id="terminal">
+		<div id="history"></div>
+		<div id="prompt">&gt;</div>
+		<textarea id="input"></textarea>
+	</div>
+	<script type="text/javascript">
+		window.terminal(document.getElementById('input'), document.getElementById('history'))
+	</script>
+</body>
+</html>
