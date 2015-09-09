@@ -16,7 +16,7 @@ for (var 😃 in 😎) {
 ```
 
 ## How do I get it?
-You can start off with the in-browser demo http://htmlpreview.github.io/?https://raw.githubusercontent.com/Thomas101/emoji-js/master/index.html
+You can start off with the in-browser demo (works best in chrome) http://htmlpreview.github.io/?http://raw.githubusercontent.com/Thomas101/emoji-js/master/index.html
 
 Once you're convinced this is for you (because lets face it, who is it not for?)
 1.) Clone the repository
