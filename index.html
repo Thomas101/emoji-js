@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-16"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	<script src="http://twemoji.maxcdn.com/twemoji.min.js"></script> 
 	<script type="text/javascript" src="emojijs.js"></script>
 	<script type="text/javascript" src="terminal.js"></script>
@@ -10,13 +10,15 @@
 	<link rel="stylesheet" type="text/css" href="terminal.css">
 </head>
 <body>
+	<h1 style="margin-top:0px; margin-left:20px; font-family:sans-serif;">Emoji-js <small>¯\_(ツ)_/¯ <a href="https://github.com/Thomas101/emoji-js" target="_blank">GitHub</a></small></h1>
 	<div id="terminal">
 		<div id="history"></div>
 		<div id="prompt">&gt;</div>
 		<textarea id="input"></textarea>
 	</div>
 	<script type="text/javascript">
-		window.terminal(document.getElementById('input'), document.getElementById('history'))
+		window.terminal(document.getElementById('input'), document.getElementById('history'));
+		twemoji.parse(document.body);
 	</script>
 </body>
 </html>

@@ -25,23 +25,26 @@
 		inElem.addEventListener('keypress', function(evt) {
 			if (evt.keyCode === 13 && !evt.shiftKey && !evt.ctrlKey && !evt.altKey) {
 				evt.preventDefault();
+				if (this.value.trim().length) {
+					var code = this.value.trim();
+					previous.push(code);
+					previousPos = undefined;
+					histElem.innerHTML += '<div class="code">' + escapeHTML(code).replace(/\n/g, '<br />') + '</div>';
+					this.value = '';
+					var result = undefined;
+					try {
+						result = eval(code);
+					} catch (e) {
+						histElem.innerHTML += '<div class="error">' + escapeHTML(e) + '</div>';
+					}
+					histElem.innerHTML += '<div class="result">' + consoleFormat(result) + '</div>';
 
-				var code = this.value;
-				previous.push(code);
-				previousPos = undefined;
-				histElem.innerHTML += '<div class="code">' + escapeHTML(code) + '</div>';
-				this.value = '';
-				var result = undefined;
-				try {
-					result = eval(code);
-				} catch (e) {
-					histElem.innerHTML += '<div class="error">' + escapeHTML(e) + '</div>';
+					// Move terminal down & add better emoji support in
+					twemoji.parse(histElem);
+					histElem.scrollTop = histElem.scrollHeight;
+				} else {
+					this.value = '';
 				}
-				histElem.innerHTML += '<div class="result">' + consoleFormat(result) + '</div>';
-
-				// Move terminal down & add better emoji support in
-				twemoji.parse(histElem);
-				histElem.scrollTop = histElem.scrollHeight;
 			}
 		}, false);
 
