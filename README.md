@@ -3,7 +3,7 @@
 emoji-js is a high-performance, 362byte language for the modern web. It's designed to be lightweight, flexible, and fully compatable with vanilla JavaScript. The code can be compiled or interpolated at run-time and is converted into the equivalent JavaScript. The compiled output is readable and pretty-printed, will work in every JavaScript runtime and always runs faster than the equivalent handwritten JavaScript†.
 
 ## What does it do?
-Is it no obvious? It allows you to use emoji's in your code. Not just in strings, but as variable names too. Take this example...
+Is it not obvious? It allows you to use emoji's in your code. Not just in strings, but as variable names too. Take this example...
 
 ```js
 var 😎 = { "language":"emoji-js", "performance":"great" };
